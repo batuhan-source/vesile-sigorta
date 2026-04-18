@@ -1,9 +1,9 @@
-# Vesile Sigorta — Kurumsal Web Sitesi
+# Vesile Sigorta — Tek Sayfa Kurumsal Site
 
-İstanbul merkezli Vesile Sigorta acentesi için Next.js ile geliştirilmiş
-kurumsal web sitesi.
+Pendik, İstanbul merkezli Vesile Sigorta acentesi için Next.js ile
+geliştirilmiş sade, tek sayfa kurumsal site.
 
-## Teknoloji Stack
+## Teknoloji
 
 - **Framework**: Next.js 14 (App Router)
 - **Dil**: TypeScript
@@ -11,21 +11,30 @@ kurumsal web sitesi.
 - **Fontlar**: Fraunces (display) + Manrope (body) — Google Fonts
 - **Hosting**: Vercel
 
-## Sayfalar
+## Yapı
 
-- `/` — Ana Sayfa (hero, neden biz, hizmet önizleme, CTA)
-- `/hakkimizda` — Kurumsal hikâye ve değerler
-- `/hizmetler` — 25+ branşın detaylı listesi
-- `/iletisim` — Telefon, WhatsApp, e-posta, form, harita
+Tek sayfa (`/`), 4 anchor bölümü:
+
+- `#ust` — Hero
+- `#hizmetler` — 2 sütun temiz liste (Bireysel + Kurumsal)
+- `#hakkimizda` — 3 paragraf
+- `#iletisim` — Ofis/WhatsApp/e-posta + adres + mesai + Pendik haritası
 
 ## Tasarım
 
-- **Palet**: Sıcak, toprak tonları — Moss Green (#1f3a2a), Terracotta
-  (#c97b5a), Amber (#e8c070), Cream (#f7f2ea)
-- **Yaklaşım**: Sıcak & samimi (aile/insan odaklı), klasik sigortacılığın
-  soğuk kurumsallığından farklılaşan bir dil
-- **Tipografi**: Karakterli serif (Fraunces) başlıkları + temiz sans-serif
-  (Manrope) gövde
+- **Palet**: Moss Green (#1f3a2a), Terracotta (#c97b5a), Amber (#e8c070),
+  Cream (#f7f2ea) — sıcak, toprak tonları
+- **Yaklaşım**: Sade, aile sıcaklığı, kurumsal soğukluktan uzak
+- **Tipografi**: Fraunces (başlıklar) + Manrope (gövde)
+
+## İletişim Bilgileri
+
+Tüm bilgiler aşağıdaki dosyalarda sabit:
+
+- `app/page.tsx` → `PHONE`, `WHATSAPP`, `EMAIL` constants
+- `components/Nav.tsx`, `components/Footer.tsx` → `WHATSAPP` const
+
+Güncellemek için sadece bu sabitleri değiştirmek yeterli.
 
 ## Lokal Geliştirme
 
@@ -36,31 +45,15 @@ npm run dev
 
 Site `http://localhost:3000` adresinde çalışır.
 
-## Vercel'e Deploy
+## Deploy
 
-### GitHub üzerinden (önerilen)
+GitHub'a push → Vercel otomatik build → canlı. `vesilesigorta.com`
+domain'i Vercel'de zaten bağlı.
 
-1. Projeyi GitHub'a push et
-2. [vercel.com](https://vercel.com)'a GitHub ile giriş yap
-3. **Add New → Project** → GitHub repo'nu seç
-4. **Deploy** (tüm ayarlar otomatik algılanır)
-5. Deploy tamamlanınca Vercel size `*.vercel.app` uzantılı URL verir
+## Yapılacaklar (opsiyonel)
 
-### Custom Domain Bağlama (vesilesigorta.com)
-
-1. Vercel Dashboard → Projenin **Settings** → **Domains**
-2. `vesilesigorta.com` yaz → **Add**
-3. Vercel iki adet DNS kaydı verir:
-   - `A` record: `76.76.21.21`
-   - veya `CNAME`: `cname.vercel-dns.com`
-4. Cloudflare DNS'de bu kayıtları ekle (proxy'i kapat — **DNS only**)
-5. Vercel otomatik SSL sertifikası alır (5-10 dakika)
-
-## Yapılacaklar
-
-- [ ] Gerçek telefon, adres ve harita koordinatlarını güncelle
-- [ ] Resmi logo entegre et
-- [ ] Teklif form backend'i (Resend / Vercel Form / kendi API)
-- [ ] Gerçek ofis fotoğrafları
-- [ ] Google Analytics / Plausible entegrasyonu
-- [ ] Sitemap.xml ve robots.txt
+- [ ] Resmi logo (şu an tipografik `V` rozeti kullanılıyor)
+- [ ] Teklif formu (istenirse WhatsApp'a prefill mesaj atan form)
+- [ ] Harita için exact koordinat (şu an adres sorgusuyla geçiyor)
+- [ ] Google Analytics / Plausible
+- [ ] sitemap.xml + robots.txt

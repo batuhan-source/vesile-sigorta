@@ -4,14 +4,12 @@ import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: {
-    default: "Vesile Sigorta | İstanbul Sigorta Acentesi",
-    template: "%s | Vesile Sigorta",
-  },
+  title: "Vesile Sigorta | Pendik İstanbul Sigorta Acentesi",
   description:
-    "Vesile Sigorta — İstanbul merkezli sigorta acentesi. Kasko, trafik, konut, DASK, sağlık, hayat ve işyeri sigortası. Güvenilir, hızlı, profesyonel sigorta çözümleri.",
+    "Vesile Sigorta — Pendik, İstanbul merkezli sigorta acentesi. Kasko, trafik, konut, DASK, sağlık, hayat ve işyeri sigortası. Güvenilir, hızlı, profesyonel.",
   keywords: [
     "sigorta",
+    "Pendik sigorta acentesi",
     "İstanbul sigorta acentesi",
     "kasko",
     "trafik sigortası",
@@ -28,9 +26,9 @@ export const metadata: Metadata = {
     type: "website",
     locale: "tr_TR",
     url: "https://vesilesigorta.com",
-    title: "Vesile Sigorta | İstanbul Sigorta Acentesi",
+    title: "Vesile Sigorta | Pendik İstanbul Sigorta Acentesi",
     description:
-      "Aileniz, işiniz ve sevdikleriniz için güvenilir sigorta çözümleri. İstanbul'dan tüm Türkiye'ye.",
+      "Aileniz, işiniz ve sevdikleriniz için güvenilir sigorta çözümleri. Pendik'ten tüm Türkiye'ye.",
     siteName: "Vesile Sigorta",
   },
   robots: {

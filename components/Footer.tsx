@@ -1,4 +1,4 @@
-import Link from "next/link";
+const WHATSAPP = "905327386717";
 
 export default function Footer() {
   return (
@@ -13,38 +13,37 @@ export default function Footer() {
               <span>Vesile Sigorta</span>
             </div>
             <p>
-              İstanbul merkezli sigorta acentesi. Aileniz ve işiniz için
-              doğru korumayı, samimi bir yaklaşımla sağlıyoruz.
+              Pendik, İstanbul merkezli sigorta acentesi. Aileniz ve işiniz
+              için doğru korumayı, samimi bir yaklaşımla sağlıyoruz.
             </p>
           </div>
 
           <div>
-            <h4>Kurumsal</h4>
+            <h4>Menü</h4>
             <ul>
-              <li><Link href="/hakkimizda">Hakkımızda</Link></li>
-              <li><Link href="/hizmetler">Hizmetlerimiz</Link></li>
-              <li><Link href="/iletisim">İletişim</Link></li>
-            </ul>
-          </div>
-
-          <div>
-            <h4>Branşlar</h4>
-            <ul>
-              <li><Link href="/hizmetler#kasko">Kasko</Link></li>
-              <li><Link href="/hizmetler#trafik">Trafik</Link></li>
-              <li><Link href="/hizmetler#konut">Konut & DASK</Link></li>
-              <li><Link href="/hizmetler#saglik">Sağlık</Link></li>
-              <li><Link href="/hizmetler#hayat">Hayat</Link></li>
+              <li><a href="#hizmetler">Hizmetler</a></li>
+              <li><a href="#hakkimizda">Hakkımızda</a></li>
+              <li><a href="#iletisim">İletişim</a></li>
             </ul>
           </div>
 
           <div>
             <h4>İletişim</h4>
             <ul>
-              <li>İstanbul, Türkiye</li>
-              <li><a href="tel:+902165551234">+90 216 555 12 34</a></li>
-              <li><a href="mailto:info@vesilesigorta.com">info@vesilesigorta.com</a></li>
-              <li><a href="https://wa.me/905551234567">WhatsApp</a></li>
+              <li><a href="tel:+902163543374">0216 354 33 74</a></li>
+              <li>
+                <a
+                  href={`https://wa.me/${WHATSAPP}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  WhatsApp
+                </a>
+              </li>
+              <li>
+                <a href="mailto:info@vesilesigorta.com">info@vesilesigorta.com</a>
+              </li>
+              <li>Pendik / İstanbul</li>
             </ul>
           </div>
         </div>
