@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Vesile Sigorta — Ailenizin ve işinizin güvencesi</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&display=swap">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- ============================== HEADER ============================== -->
+<header class="site-header" id="siteHeader">
+  <div class="container header-row">
+    <a href="#top" class="brand" aria-label="Vesile Sigorta">
+      <span class="brand-mark" aria-hidden="true">
+        <svg viewBox="0 0 64 64" width="40" height="40">
+          <defs>
+            <linearGradient id="markGrad" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0%" stop-color="var(--c-accent-2)"/>
+              <stop offset="60%" stop-color="var(--c-primary)"/>
+              <stop offset="100%" stop-color="var(--c-primary-dark)"/>
+            </linearGradient>
+          </defs>
+          <path class="blob-shape" fill="url(#markGrad)"
+            d="M32 3c10 0 17 3 22 9s7 14 7 22-3 16-9 22-13 8-21 8-16-3-22-9S1 41 1 33 4 17 10 11 22 3 32 3Z"/>
+          <path d="M19 24 L32 45 L45 24" fill="none" stroke="white" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/>
+          <circle cx="45" cy="24" r="3" fill="var(--c-accent-1)"/>
+        </svg>
+      </span>
+      <span class="brand-word">
+        <span class="brand-name">vesile</span>
+        <span class="brand-sub">sigorta</span>
+      </span>
+    </a>
+
+    <nav class="site-nav" aria-label="Ana menü">
+      <a href="#hizmetler">Hizmetler</a>
+      <a href="#hikaye">Hakkımızda</a>
+      <a href="#sss">SSS</a>
+      <a href="#iletisim">İletişim</a>
+    </nav>
+
+    <div class="header-cta">
+      <a href="#teklif" class="btn btn-primary btn-sm">Teklif Al</a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Menü">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- ============================== 1. HERO ============================== -->
+<section class="hero" id="hero">
+  <div class="hero-bg" aria-hidden="true">
+    <div class="blob blob-a"></div>
+    <div class="blob blob-b"></div>
+    <div class="blob blob-c"></div>
+    <div class="grain"></div>
+  </div>
+
+  <div class="container hero-grid">
+    <div class="hero-copy">
+      <div class="eyebrow">
+        <span class="dot"></span> Üç nesildir ailelerin yanında · 2010'dan beri
+      </div>
+      <h1 class="display">
+        Ailenizin ve işinizin <em>güvencesi</em>, tek acentede.
+      </h1>
+      <p class="lede">
+        23 sigorta şirketinin tekliflerini <strong>Vesi</strong> ile karşılaştırın,
+        3 dakikada size en uygun poliçeyi bulun.
+      </p>
+
+      <div class="hero-ctas">
+        <a href="https://wa.me/" class="btn btn-whatsapp" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
+            <path fill="currentColor" d="M19.05 4.91A9.82 9.82 0 0 0 12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.91-7.01ZM12.04 20.15h-.01a8.2 8.2 0 0 1-4.18-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.23 8.23 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24a8.19 8.19 0 0 1 5.83 2.42 8.19 8.19 0 0 1 2.41 5.83c0 4.54-3.7 8.23-8.24 8.23Zm4.52-6.16c-.25-.12-1.47-.72-1.7-.81-.23-.08-.39-.12-.56.13s-.64.81-.79.98c-.14.17-.29.19-.54.06-.25-.12-1.05-.39-2-1.23a7.52 7.52 0 0 1-1.39-1.73c-.14-.25-.02-.38.11-.5.11-.11.25-.29.37-.44.12-.14.17-.25.25-.41.08-.17.04-.31-.02-.44-.06-.12-.56-1.35-.77-1.85-.2-.48-.41-.42-.56-.43l-.48-.01c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1s.9 2.43 1.03 2.6c.12.17 1.78 2.71 4.31 3.8.6.26 1.07.41 1.44.53.6.19 1.16.16 1.59.1.49-.07 1.47-.6 1.68-1.18.21-.58.21-1.08.15-1.18-.06-.1-.23-.17-.48-.29Z"/>
+          </svg>
+          WhatsApp'tan Teklif Al
+        </a>
+        <a href="#teklif" class="btn btn-primary btn-lg">
+          Online Teklif Formu
+          <span class="btn-arrow">→</span>
+        </a>
+      </div>
+
+      <div class="hero-trust">
+        <div class="trust-logos" aria-label="Çalıştığımız sigorta şirketlerinden bazıları">
+          <span class="trust-logo">Anadolu</span>
+          <span class="trust-logo">Allianz</span>
+          <span class="trust-logo">AXA</span>
+          <span class="trust-logo">Aksigorta</span>
+          <span class="trust-logo">Mapfre</span>
+          <span class="trust-logo">HDI</span>
+        </div>
+        <div class="trust-line">+17 daha · <strong>23 şirketle</strong> çalışıyoruz</div>
+      </div>
+    </div>
+
+    <div class="hero-vesi">
+      <div class="vesi-stage" id="vesiHeroStage">
+        <div class="vesi-card">
+          <div class="vesi-figure-wrap">
+            <div class="vesi-figure" id="vesiHero" data-vesi="hero">
+              <!-- filled by JS -->
+            </div>
+          </div>
+          <div class="vesi-bubble" id="vesiBubble" aria-live="polite">
+            <span class="bubble-typer" id="bubbleTyper"></span>
+            <span class="bubble-caret">▍</span>
+          </div>
+          <div class="vesi-chips" id="vesiChips" hidden>
+            <button class="chip" data-branch="arac">Araç</button>
+            <button class="chip" data-branch="konut">Konut</button>
+            <button class="chip" data-branch="isyeri">İşyeri</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="scroll-cue" aria-hidden="true">
+    <span>keşfet</span>
+    <svg width="12" height="18" viewBox="0 0 12 18"><path d="M6 2v14m0 0L2 12m4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+  </div>
+</section>
+
+<!-- ============================== 2. SOSYAL KANIT ============================== -->
+<section class="stats" aria-label="Sosyal kanıt">
+  <div class="container stats-grid">
+    <div class="stat-card">
+      <div class="stat-num"><span class="counter" data-to="15">0</span>+</div>
+      <div class="stat-label">Yıl deneyim</div>
+      <div class="stat-hint">2010'dan beri aktif acente</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-num"><span class="counter" data-to="23">0</span></div>
+      <div class="stat-label">Sigorta şirketi</div>
+      <div class="stat-hint">Karşılaştırmalı teklif</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-num"><span class="counter" data-to="25">0</span></div>
+      <div class="stat-label">Branşta hizmet</div>
+      <div class="stat-hint">Birey, aile ve KOBİ</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-num">7/24</div>
+      <div class="stat-label">Hasar desteği</div>
+      <div class="stat-hint">WhatsApp ve telefon</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================== 3. BRANŞ GRID ============================== -->
+<section class="branches" id="hizmetler">
+  <div class="container">
+    <div class="section-head">
+      <div class="mini-vesi" data-vesi="curious"></div>
+      <div>
+        <span class="eyebrow eyebrow-inline"><span class="dot"></span> Hizmetlerimiz</span>
+        <h2 class="h2">Size hangi alanda <em>destek</em> olabilirim?</h2>
+        <p class="section-sub">Bireysel ihtiyacınızdan işletme risklerine — 25 branşta karşılaştırmalı teklif.</p>
+      </div>
+    </div>
+
+    <div class="branch-grid">
+      <a class="branch-card" data-branch="arac" href="#teklif">
+        <div class="branch-ico" aria-hidden="true">
+          <svg viewBox="0 0 40 40" width="32" height="32"><path d="M8 24h24v6a2 2 0 0 1-2 2h-2a2 2 0 0 1-2-2v-1H14v1a2 2 0 0 1-2 2h-2a2 2 0 0 1-2-2v-6Zm1-1 3-9a3 3 0 0 1 3-2h10a3 3 0 0 1 3 2l3 9" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="13" cy="27" r="1.5" fill="currentColor"/><circle cx="27" cy="27" r="1.5" fill="currentColor"/></svg>
+        </div>
+        <h3>Araç</h3>
+        <p>Kasko + Trafik. Hasarsızlık indirimi ve yol yardımı dahil.</p>
+        <span class="branch-cta">Detay <span aria-hidden="true">→</span></span>
+      </a>
+
+      <a class="branch-card" data-branch="konut" href="#teklif">
+        <div class="branch-ico" aria-hidden="true">
+          <svg viewBox="0 0 40 40" width="32" height="32"><path d="M6 20 20 8l14 12v13a2 2 0 0 1-2 2h-8v-9h-8v9H8a2 2 0 0 1-2-2V20Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
+        </div>
+        <h3>Konut & DASK</h3>
+        <p>Yangın, deprem ve hırsızlık teminatları birlikte.</p>
+        <span class="branch-cta">Detay <span aria-hidden="true">→</span></span>
+      </a>
+
+      <a class="branch-card" data-branch="saglik" href="#teklif">
+        <div class="branch-ico" aria-hidden="true">
+          <svg viewBox="0 0 40 40" width="32" height="32"><path d="M20 32s-11-6-11-14a7 7 0 0 1 11-5 7 7 0 0 1 11 5c0 8-11 14-11 14Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M16 19h8M20 15v8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        </div>
+        <h3>Sağlık</h3>
+        <p>Tamamlayıcı ve özel sağlık sigortası. Aile paketleri.</p>
+        <span class="branch-cta">Detay <span aria-hidden="true">→</span></span>
+      </a>
+
+      <a class="branch-card" data-branch="isyeri" href="#teklif">
+        <div class="branch-ico" aria-hidden="true">
+          <svg viewBox="0 0 40 40" width="32" height="32"><rect x="7" y="12" width="26" height="22" rx="2" fill="none" stroke="currentColor" stroke-width="2"/><path d="M14 12V8h12v4M7 20h26" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        </div>
+        <h3>İşyeri & Sorumluluk</h3>
+        <p>KOBİ paket poliçeleri, mesleki sorumluluk ve cam kırılma.</p>
+        <span class="branch-cta">Detay <span aria-hidden="true">→</span></span>
+      </a>
+
+      <a class="branch-card" data-branch="marin" href="#teklif">
+        <div class="branch-ico" aria-hidden="true">
+          <svg viewBox="0 0 40 40" width="32" height="32"><path d="M6 26h28l-3 6H9l-3-6Zm4-2V12l10-4 10 4v12" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M20 8v16" stroke="currentColor" stroke-width="2"/></svg>
+        </div>
+        <h3>Gemi / Marin</h3>
+        <p>Tekne, yat ve ticari deniz taşıtları için özel teminatlar.</p>
+        <span class="branch-cta">Detay <span aria-hidden="true">→</span></span>
+      </a>
+
+      <a class="branch-card" data-branch="nakliyat" href="#teklif">
+        <div class="branch-ico" aria-hidden="true">
+          <svg viewBox="0 0 40 40" width="32" height="32"><rect x="5" y="14" width="18" height="14" fill="none" stroke="currentColor" stroke-width="2"/><path d="M23 18h7l4 4v6h-11V18Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="12" cy="30" r="2.5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="28" cy="30" r="2.5" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+        </div>
+        <h3>Nakliyat</h3>
+        <p>Emtea, sefer bazlı ve abonman nakliyat poliçeleri.</p>
+        <span class="branch-cta">Detay <span aria-hidden="true">→</span></span>
+      </a>
+
+      <a class="branch-card" data-branch="hayat" href="#teklif">
+        <div class="branch-ico" aria-hidden="true">
+          <svg viewBox="0 0 40 40" width="32" height="32"><path d="M6 22c0-4 3-7 7-7 3 0 5 1.5 7 4 2-2.5 4-4 7-4 4 0 7 3 7 7 0 8-14 14-14 14S6 30 6 22Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
+        </div>
+        <h3>Hayat & BES</h3>
+        <p>Vefat, maluliyet ve bireysel emeklilik planları.</p>
+        <span class="branch-cta">Detay <span aria-hidden="true">→</span></span>
+      </a>
+
+      <a class="branch-card" data-branch="muhendislik" href="#teklif">
+        <div class="branch-ico" aria-hidden="true">
+          <svg viewBox="0 0 40 40" width="32" height="32"><path d="M8 32V14l6-6h18v24H8Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M14 8v6H8M16 20h12M16 25h12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        </div>
+        <h3>Mühendislik</h3>
+        <p>İnşaat all-risk, montaj ve elektronik cihaz sigortaları.</p>
+        <span class="branch-cta">Detay <span aria-hidden="true">→</span></span>
+      </a>
+    </div>
+
+    <div class="branch-all">
+      <a href="#teklif" class="link-arrow">Tüm 25 branşı görüntüle <span aria-hidden="true">→</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================== 4. NEDEN VESİLE ============================== -->
+<section class="why" id="neden">
+  <div class="container">
+    <span class="eyebrow eyebrow-center"><span class="dot"></span> Neden Vesile Sigorta</span>
+    <h2 class="h2 h2-center">Bağımsız bir acenteyle <em>çalışmanın farkı</em>.</h2>
+
+    <div class="why-grid">
+      <div class="why-col">
+        <div class="mini-vesi" data-vesi="explain"></div>
+        <h3>Bağımsız acente</h3>
+        <p>Tek bir şirketin değil, <strong>23 şirketin</strong> kapısını sizin adınıza çalıyoruz. Karşılaştırmalı teklif, tek bir telefonla.</p>
+      </div>
+      <div class="why-col">
+        <div class="mini-vesi" data-vesi="calm"></div>
+        <h3>Üç nesillik miras</h3>
+        <p>Anneannemin adı, annemin acentesi. <strong>2010'dan beri</strong> müşterilerimizin yanındayız; isim bir söz gibi taşınıyor.</p>
+      </div>
+      <div class="why-col">
+        <div class="mini-vesi" data-vesi="wink"></div>
+        <h3>Dijital + insani</h3>
+        <p>AI destekli takip sistemi, ama poliçenizi bir robotla değil, <strong>gerçek bir uzmanla</strong> netleştirirsiniz.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================== 5. NASIL ÇALIŞIR ============================== -->
+<section class="how" id="nasil">
+  <div class="container">
+    <div class="section-head section-head-stacked">
+      <span class="eyebrow"><span class="dot"></span> Süreç</span>
+      <h2 class="h2">Üç adımda, 3 dakikada.</h2>
+    </div>
+
+    <ol class="timeline" id="timeline">
+      <li class="t-step">
+        <div class="t-num">01</div>
+        <div class="t-vesi" data-vesi="curious"></div>
+        <div class="t-body">
+          <h3>Vesi size sorar</h3>
+          <p>WhatsApp veya formdan ihtiyacınızı birkaç soruyla alırız. Telefon trafiği yok.</p>
+        </div>
+      </li>
+      <li class="t-step">
+        <div class="t-num">02</div>
+        <div class="t-vesi" data-vesi="explain"></div>
+        <div class="t-body">
+          <h3>23 şirketten teklif</h3>
+          <p>Tüm teminatları yan yana dizeriz. Gizli madde yok, koşullar şeffaf.</p>
+        </div>
+      </li>
+      <li class="t-step">
+        <div class="t-num">03</div>
+        <div class="t-vesi" data-vesi="happy"></div>
+        <div class="t-body">
+          <h3>Poliçe + hasarda yanınızdayız</h3>
+          <p>Onaylayın, poliçe anında düzenlensin. Hasarda 7/24 size biz bakarız.</p>
+        </div>
+      </li>
+      <div class="t-line" aria-hidden="true"><span class="t-line-fill" id="tLineFill"></span></div>
+    </ol>
+  </div>
+</section>
+
+<!-- ============================== 6. HİKAYEMİZ ============================== -->
+<section class="story" id="hikaye">
+  <div class="container story-grid">
+    <div class="story-copy">
+      <span class="eyebrow"><span class="dot"></span> Hikayemiz</span>
+      <h2 class="h2">Üç nesillik bir <em>köprü</em>.</h2>
+      <p>
+        <strong>Vesile</strong>, kurucumuzun anneannesinin ismidir. Beş yetimi büyüten,
+        zor günde aracı olan bir figür. Türkçede "vesile" zaten bir köprü demek —
+        bizi bir araya getiren şey.
+      </p>
+      <p>
+        2010'da annem, 35 yıllık yönetici tecrübesini sigortaya taşıdı. Bugün ben,
+        üçüncü nesil olarak bu mirası dijital ve AI destekli süreçlerle büyütüyorum.
+        İsim aynı kaldı, yöntemler zamana göre yenilendi.
+      </p>
+      <p class="story-sign">— Vesile Sigorta ailesi</p>
+    </div>
+
+    <div class="story-art" aria-hidden="true">
+      <svg viewBox="0 0 400 400" class="generations">
+        <defs>
+          <linearGradient id="genG1" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="var(--c-accent-1)"/>
+            <stop offset="100%" stop-color="var(--c-accent-1-dark)"/>
+          </linearGradient>
+          <linearGradient id="genG2" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="var(--c-primary)"/>
+            <stop offset="100%" stop-color="var(--c-primary-dark)"/>
+          </linearGradient>
+          <linearGradient id="genG3" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="var(--c-accent-2)"/>
+            <stop offset="100%" stop-color="var(--c-accent-2-dark)"/>
+          </linearGradient>
+        </defs>
+        <path class="gen-arc gen-1" d="M60 280 Q 200 80 340 280" fill="none" stroke="url(#genG1)" stroke-width="28" stroke-linecap="round"/>
+        <path class="gen-arc gen-2" d="M90 290 Q 200 130 310 290" fill="none" stroke="url(#genG2)" stroke-width="22" stroke-linecap="round"/>
+        <path class="gen-arc gen-3" d="M120 300 Q 200 180 280 300" fill="none" stroke="url(#genG3)" stroke-width="16" stroke-linecap="round"/>
+        <text x="60" y="330" class="gen-label">1965 · Anneanne</text>
+        <text x="120" y="360" class="gen-label">2010 · Anne</text>
+        <text x="170" y="390" class="gen-label">Bugün · Oğul</text>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<!-- ============================== 7. YORUMLAR ============================== -->
+<section class="reviews" aria-label="Müşteri yorumları">
+  <div class="container">
+    <span class="eyebrow"><span class="dot"></span> Ne diyorlar</span>
+    <h2 class="h2">Bize emanet edilen hikayeler.</h2>
+
+    <div class="review-grid">
+      <article class="review-card">
+        <div class="quote-mark" aria-hidden="true">“</div>
+        <p class="review-body">
+          Kaza sonrası aradığım anda dosyayı kendileri açtı. Ertesi gün aracım
+          servisteydi. İlk kez bir hasar sürecinde kimseyi aramak zorunda kalmadım.
+        </p>
+        <div class="review-meta">
+          <div class="avatar avatar-1">EK</div>
+          <div>
+            <div class="review-name">Elif K.</div>
+            <div class="review-role">Bireysel müşteri · 4 yıl</div>
+          </div>
+          <div class="review-badge">Kasko</div>
+        </div>
+      </article>
+
+      <article class="review-card">
+        <div class="quote-mark" aria-hidden="true">“</div>
+        <p class="review-body">
+          KOBİ paket poliçesinde üç şirketi yan yana koydular. Tek telefonla
+          %32 daha ucuz teminata geçtik. Yenileme dönemi geldiğinde yine aradılar.
+        </p>
+        <div class="review-meta">
+          <div class="avatar avatar-2">MT</div>
+          <div>
+            <div class="review-name">Murat T.</div>
+            <div class="review-role">KOBİ sahibi · tekstil</div>
+          </div>
+          <div class="review-badge">İşyeri</div>
+        </div>
+      </article>
+
+      <article class="review-card">
+        <div class="quote-mark" aria-hidden="true">“</div>
+        <p class="review-body">
+          Annemin DASK'ından çocuğumun sağlık sigortasına, her şey bir yerde.
+          Aileden bir dosta danışmak gibi; ama işleri kurumsal yapıyorlar.
+        </p>
+        <div class="review-meta">
+          <div class="avatar avatar-3">ZA</div>
+          <div>
+            <div class="review-name">Zeynep A.</div>
+            <div class="review-role">Aile müşterisi · 9 yıl</div>
+          </div>
+          <div class="review-badge">Aile paketi</div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============================== 8. TEKLİF FORMU ============================== -->
+<section class="quote" id="teklif">
+  <div class="container quote-grid">
+    <div class="quote-intro">
+      <div class="mini-vesi mini-vesi-lg" data-vesi="happy"></div>
+      <span class="eyebrow eyebrow-light"><span class="dot"></span> Teklif al</span>
+      <h2 class="h2 h2-light">Size en uygun teklifi <em>24 saat içinde</em> iletelim.</h2>
+      <p class="quote-sub">Formu doldurun, Vesi 23 şirketten sizin için en uygun üçünü seçip yan yana göstersin.</p>
+
+      <a href="https://wa.me/" class="btn btn-whatsapp btn-lg" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path fill="currentColor" d="M19.05 4.91A9.82 9.82 0 0 0 12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.91-7.01Z"/></svg>
+          Ya da WhatsApp'tan konuşun
+      </a>
+    </div>
+
+    <form class="quote-form" id="quoteForm" novalidate>
+      <div class="field">
+        <label for="fName">Ad Soyad</label>
+        <input id="fName" name="name" type="text" required placeholder="Adınız Soyadınız">
+      </div>
+      <div class="field-row">
+        <div class="field">
+          <label for="fPhone">Telefon</label>
+          <input id="fPhone" name="phone" type="tel" required placeholder="0 5__ ___ __ __">
+        </div>
+        <div class="field">
+          <label for="fEmail">E-posta</label>
+          <input id="fEmail" name="email" type="email" placeholder="ornek@posta.com">
+        </div>
+      </div>
+      <div class="field">
+        <label for="fBranch">Branş</label>
+        <select id="fBranch" name="branch" required>
+          <option value="">Seçiniz</option>
+          <option>Araç (Kasko + Trafik)</option>
+          <option>Konut & DASK</option>
+          <option>Sağlık</option>
+          <option>İşyeri & Sorumluluk</option>
+          <option>Gemi / Marin</option>
+          <option>Nakliyat</option>
+          <option>Hayat & BES</option>
+          <option>Mühendislik</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="fNote">Kısa not <span class="optional">(opsiyonel)</span></label>
+        <textarea id="fNote" name="note" rows="3" placeholder="Örn. 2022 model otomatik sedan, İstanbul plakalı."></textarea>
+      </div>
+      <label class="checkbox">
+        <input type="checkbox" required>
+        <span>KVKK Aydınlatma Metnini okudum, iletişim için onay veriyorum.</span>
+      </label>
+      <button type="submit" class="btn btn-primary btn-block btn-lg">
+        Teklifimi Hazırla
+        <span class="btn-arrow">→</span>
+      </button>
+      <div class="form-success" id="formSuccess" hidden>
+        <div class="success-vesi" data-vesi="celebrate"></div>
+        <div>
+          <strong>Teşekkürler!</strong> Vesi talebinizi aldı. En geç 24 saat içinde döneceğiz.
+        </div>
+      </div>
+    </form>
+  </div>
+</section>
+
+<!-- ============================== 9. SSS ============================== -->
+<section class="faq" id="sss">
+  <div class="container faq-grid">
+    <div class="faq-side">
+      <div class="mini-vesi mini-vesi-lg" data-vesi="listen"></div>
+      <span class="eyebrow"><span class="dot"></span> SSS</span>
+      <h2 class="h2">Sıkça sorulan sorular.</h2>
+      <p class="section-sub">Cevabını bulamazsanız WhatsApp'tan Vesi'ye sorun; 3 dakika içinde dönelim.</p>
+    </div>
+
+    <ul class="accordion" id="accordion">
+      <li class="acc-item">
+        <button class="acc-head" aria-expanded="false">
+          <span>Bağımsız acente ne demek, neden önemli?</span>
+          <span class="acc-ico" aria-hidden="true">+</span>
+        </button>
+        <div class="acc-body"><p>Bağımsız acente, tek bir şirkete bağlı olmadan birden fazla sigortacıyla çalışır. Bu sayede 23 şirketin teklifini karşılaştırıp size en uygununu sunabiliriz.</p></div>
+      </li>
+      <li class="acc-item">
+        <button class="acc-head" aria-expanded="false">
+          <span>Teklif almak ücretli mi?</span>
+          <span class="acc-ico" aria-hidden="true">+</span>
+        </button>
+        <div class="acc-body"><p>Hayır, teklif ve karşılaştırma ücretsizdir. Komisyonumuzu sigorta şirketinden alırız, sizin ödediğiniz tutar değişmez.</p></div>
+      </li>
+      <li class="acc-item">
+        <button class="acc-head" aria-expanded="false">
+          <span>Mevcut poliçemi size transfer edebilir miyim?</span>
+          <span class="acc-ico" aria-hidden="true">+</span>
+        </button>
+        <div class="acc-body"><p>Evet, mevcut poliçeniz devam ederken acentesini değiştirebilirsiniz. Bir sonraki yenilemede sizin adınıza takip ederiz.</p></div>
+      </li>
+      <li class="acc-item">
+        <button class="acc-head" aria-expanded="false">
+          <span>Hasar anında ne yapmalıyım?</span>
+          <span class="acc-ico" aria-hidden="true">+</span>
+        </button>
+        <div class="acc-body"><p>WhatsApp veya telefondan bize ulaşın — dosyayı biz açalım. Gerekli evrakları liste halinde iletiriz, ekspertiz randevusunu ayarlarız.</p></div>
+      </li>
+      <li class="acc-item">
+        <button class="acc-head" aria-expanded="false">
+          <span>Poliçem bittiğinde otomatik yenileniyor mu?</span>
+          <span class="acc-ico" aria-hidden="true">+</span>
+        </button>
+        <div class="acc-body"><p>Sadece sizin onayınızla yenilenir. 30 gün önceden hatırlatma gönderir, alternatif tekliflerle birlikte seçimi size bırakırız.</p></div>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============================== 10. SON ÇAĞRI ============================== -->
+<section class="final-cta">
+  <div class="container final-inner">
+    <div class="final-vesi" data-vesi="wave"></div>
+    <div class="final-copy">
+      <h2>Hâlâ karar veremediniz mi? <em>Vesi size yardım etsin.</em></h2>
+      <p>İki dakika konuşalım — size uygun olmayan bir şey öneriyorsak, söyleyelim.</p>
+    </div>
+    <div class="final-ctas">
+      <a href="https://wa.me/" class="btn btn-whatsapp" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M19.05 4.91A9.82 9.82 0 0 0 12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.91-7.01Z"/></svg>
+        WhatsApp'tan yaz
+      </a>
+      <a href="#teklif" class="btn btn-outline-light">Formu doldur</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================== 11. FOOTER ============================== -->
+<footer class="site-footer" id="iletisim">
+  <div class="container footer-grid">
+    <div class="foot-brand">
+      <a href="#top" class="brand brand-foot" aria-label="Vesile Sigorta">
+        <span class="brand-mark">
+          <svg viewBox="0 0 64 64" width="36" height="36">
+            <path fill="url(#markGrad)" d="M32 3c10 0 17 3 22 9s7 14 7 22-3 16-9 22-13 8-21 8-16-3-22-9S1 41 1 33 4 17 10 11 22 3 32 3Z"/>
+            <path d="M19 24 L32 45 L45 24" fill="none" stroke="white" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <circle cx="45" cy="24" r="3" fill="var(--c-accent-1)"/>
+          </svg>
+        </span>
+        <span class="brand-word">
+          <span class="brand-name">vesile</span>
+          <span class="brand-sub">sigorta</span>
+        </span>
+      </a>
+      <p class="foot-mission">Aracı olmak, vesile olmak. Üç nesildir ailelerin yanında, 2010'dan beri acentede.</p>
+      <div class="social">
+        <a href="#" aria-label="Instagram" class="social-link"><svg viewBox="0 0 24 24" width="18" height="18"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor"/></svg></a>
+        <a href="#" aria-label="LinkedIn" class="social-link"><svg viewBox="0 0 24 24" width="18" height="18"><rect x="3" y="3" width="18" height="18" rx="3" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M8 10v7M8 7.5v.01M12 17v-4a2 2 0 0 1 4 0v4M12 10v7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></a>
+        <a href="#" aria-label="YouTube" class="social-link"><svg viewBox="0 0 24 24" width="18" height="18"><rect x="2" y="5" width="20" height="14" rx="3" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="m10 9 5 3-5 3V9Z" fill="currentColor"/></svg></a>
+      </div>
+    </div>
+
+    <div class="foot-col">
+      <h4>Hizmetler</h4>
+      <a href="#hizmetler">Tüm branşlar</a>
+      <a href="#hizmetler">Araç · Kasko</a>
+      <a href="#hizmetler">Konut · DASK</a>
+      <a href="#hizmetler">İşyeri & KOBİ</a>
+      <a href="#hizmetler">Sağlık & Hayat</a>
+    </div>
+
+    <div class="foot-col">
+      <h4>Kurumsal</h4>
+      <a href="#hikaye">Hakkımızda</a>
+      <a href="#sss">Sıkça sorulanlar</a>
+      <a href="#">KVKK Aydınlatma</a>
+      <a href="#">Çerez Politikası</a>
+      <a href="#">Aydınlatma Metni</a>
+    </div>
+
+    <div class="foot-col">
+      <h4>İletişim</h4>
+      <a href="#" class="foot-contact">
+        <span class="foot-ico">📍</span>
+        <span>İstanbul, Türkiye<br><span class="muted">Adres detayı teklif sonrası</span></span>
+      </a>
+      <a href="tel:+900000000000" class="foot-contact">
+        <span class="foot-ico">☎</span>
+        <span>0 (___) ___ __ __</span>
+      </a>
+      <a href="https://wa.me/" target="_blank" rel="noopener" class="foot-contact">
+        <span class="foot-ico">💬</span>
+        <span>WhatsApp</span>
+      </a>
+      <a href="mailto:merhaba@vesilesigorta.com" class="foot-contact">
+        <span class="foot-ico">✉</span>
+        <span>merhaba@vesilesigorta.com</span>
+      </a>
+    </div>
+  </div>
+
+  <div class="container foot-bottom">
+    <span>© 2026 Vesile Sigorta</span>
+    <span class="foot-sep">·</span>
+    <span>SEDDK Ruhsat No: <strong>——</strong></span>
+    <span class="foot-sep">·</span>
+    <span>Bağımsız sigorta acentesi</span>
+  </div>
+</footer>
+
+</main>
+
+<!-- ============================== MOBILE STICKY CTA ============================== -->
+<div class="mobile-sticky" aria-label="Hızlı işlemler">
+  <a href="https://wa.me/" class="btn btn-whatsapp btn-block" target="_blank" rel="noopener">
+    <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M19.05 4.91A9.82 9.82 0 0 0 12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.91-7.01Z"/></svg>
+    WhatsApp
+  </a>
+  <a href="#teklif" class="btn btn-primary btn-block">Teklif Al</a>
+</div>
+
+<!-- ============================== CHAT WIDGET ============================== -->
+<div class="chat-widget" id="chatWidget">
+  <button class="chat-fab" id="chatFab" aria-label="Vesi ile sohbet et">
+    <div class="fab-vesi" data-vesi="fab"></div>
+    <span class="fab-pulse" aria-hidden="true"></span>
+    <span class="fab-badge" id="fabBadge" hidden>1</span>
+  </button>
+
+  <div class="chat-preview" id="chatPreview" hidden>
+    Bir sorum var deyin 👋
+  </div>
+
+  <div class="chat-panel" id="chatPanel" hidden>
+    <header class="chat-head">
+      <div class="chat-head-vesi" data-vesi="chat"></div>
+      <div>
+        <div class="chat-name">Vesi <span class="chat-status"><span class="dot-green"></span> çevrimiçi</span></div>
+        <div class="chat-sub">Vesile Sigorta dijital asistanı</div>
+      </div>
+      <button class="chat-close" id="chatClose" aria-label="Kapat">×</button>
+    </header>
+    <div class="chat-log" id="chatLog" aria-live="polite"></div>
+    <form class="chat-input" id="chatForm">
+      <input type="text" id="chatInput" placeholder="Sorunuzu yazın… (örn. Konut sigortası nedir?)" autocomplete="off">
+      <button type="submit" aria-label="Gönder">
+        <svg viewBox="0 0 24 24" width="18" height="18"><path d="M4 12 20 4l-5 16-3-7-8-1Z" fill="currentColor"/></svg>
+      </button>
+    </form>
+    <div class="chat-foot">
+      Vesi, bilgilendirme amaçlıdır. Bağlayıcı teklif için formu doldurun.
+    </div>
+  </div>
+</div>
+
+<!-- ============================== TWEAKS PANEL ============================== -->
+<aside class="tweaks-panel" id="tweaksPanel" hidden>
+  <header class="tweaks-head">
+    <strong>Tweaks</strong>
+    <button class="tweaks-close" id="tweaksClose" aria-label="Kapat">×</button>
+  </header>
+  <div class="tweaks-body">
+    <div class="tweak-row">
+      <label>Köşe yuvarlaklığı</label>
+      <div class="tweak-seg" role="radiogroup" aria-label="Köşe yuvarlaklığı">
+        <button data-radius="sharp">Sharp</button>
+        <button data-radius="soft" class="is-active">Soft</button>
+        <button data-radius="very">Very soft</button>
+      </div>
+    </div>
+    <div class="tweak-row">
+      <label for="vesiSize">Vesi boyutu</label>
+      <input type="range" id="vesiSize" min="0.7" max="1.35" step="0.05" value="1">
+      <span class="tweak-val" id="vesiSizeVal">1.00×</span>
+    </div>
+  </div>
+</aside>
+
+<script>
+  // Tweak defaults — editable via host
+  window.__TWEAK_DEFAULTS = /*EDITMODE-BEGIN*/{
+    "radius": "soft",
+    "vesiSize": 1.0
+  }/*EDITMODE-END*/;
+</script>
+<script src="vesi.js" defer></script>
+<script src="app.js" defer></script>
+</body>
+</html>
