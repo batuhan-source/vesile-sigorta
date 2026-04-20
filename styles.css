@@ -178,6 +178,69 @@ h1, h2, h3, h4 { font-family: 'Fraunces', serif; font-weight: 600; letter-spacin
 .brand-name { font-family: 'Fraunces', serif; font-weight: 600; font-size: 22px; letter-spacing: -0.03em; color: var(--c-ink); }
 .brand-sub { font-family: 'DM Sans', sans-serif; font-weight: 500; font-size: 12px; letter-spacing: .12em; text-transform: uppercase; color: var(--c-ink-mute); margin-top: 3px; }
 
+/* =========================================================
+   BRAND WORDMARK — "vesile.sigorta"
+   Marka kimliğinden: DM Sans 800, sıkı letter-spacing,
+   accent sarı nokta ortada.
+   ========================================================= */
+.brand-wordmark {
+  font-family: 'DM Sans', system-ui, sans-serif;
+  font-weight: 800;
+  font-size: clamp(22px, 2.4vw, 28px);
+  letter-spacing: -0.045em;
+  line-height: 1;
+  color: var(--c-ink);
+  gap: 0;
+  text-decoration: none;
+  white-space: nowrap;
+}
+.brand-wordmark .wm-part { display: inline-block; }
+.brand-wordmark .wm-dot {
+  display: inline-block;
+  color: var(--c-accent-2);
+  font-weight: 900;
+  margin: 0 -0.02em;
+}
+
+/* Footer variant (koyu zemin) */
+.brand-wordmark-foot {
+  color: white;
+  font-size: clamp(26px, 3vw, 32px);
+}
+.brand-wordmark-foot .wm-dot { color: var(--c-accent-2); }
+
+/* Giriş animasyonu — Cagdas v2'deki bounceWord'dan uyarlandı */
+@keyframes bounceWordIn {
+  0%   { opacity: 0; transform: translateY(16px); }
+  60%  { opacity: 0; transform: translateY(16px); }
+  80%  { opacity: 1; transform: translateY(-4px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+@keyframes wmDotPulse {
+  0%, 100% { transform: scale(1);    filter: brightness(1); }
+  50%      { transform: scale(1.18); filter: brightness(1.2); }
+}
+
+.brand-wordmark .wm-a,
+.brand-wordmark .wm-b { animation: bounceWordIn .85s cubic-bezier(.4,1.4,.6,1) both; }
+.brand-wordmark .wm-a   { animation-delay: .1s;  }
+.brand-wordmark .wm-b   { animation-delay: .55s; }
+
+@media (prefers-reduced-motion: no-preference) {
+  .brand-wordmark .wm-dot {
+    animation:
+      bounceWordIn .85s cubic-bezier(.4,1.4,.6,1) .35s both,
+      wmDotPulse 3.2s ease-in-out 1.5s infinite;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .brand-wordmark .wm-a,
+  .brand-wordmark .wm-b,
+  .brand-wordmark .wm-dot { animation: none; opacity: 1; transform: none; }
+}
+
+.brand-wordmark:hover .wm-dot { color: var(--c-primary); transition: color .25s; }
+
 .site-nav { display: flex; gap: 8px; }
 .site-nav a { padding: 8px 14px; border-radius: var(--r-sm); color: var(--c-ink-soft); font-size: 15px; font-weight: 500; transition: background .2s, color .2s; }
 .site-nav a:hover { background: rgba(43,79,232,.06); color: var(--c-primary); }
