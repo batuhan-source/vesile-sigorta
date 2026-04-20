@@ -854,119 +854,73 @@ h1, h2, h3, h4 { font-family: 'Fraunces', serif; font-weight: 600; letter-spacin
 }
 
 /* =========================================================
-   VESİ — 3D karakter stilleri + "yaşayan" efektler
-   Tek görsel kullanıyoruz ama CSS katmanlarıyla canlı hissi.
+   VESİ — SVG blob karakter (göz kırpan, nefes alan, sallayan)
+   Marka kimliğinden alınan animasyonlar: breath, blink, wave,
+   celebrate, sparkle. Tümü SVG path/group'ları üzerinde çalışır.
    ========================================================= */
-.vesi-img {
-  width: 100%;
-  height: 100%;
-  display: block;
-  user-select: none;
-  -webkit-user-drag: none;
-  transition: transform .4s var(--ease-out), filter .3s;
-}
-.vesi-img-round {
-  border-radius: 50%;
-  background: #C4DDEB;
-}
-.vesi-img-hero {
-  border-radius: var(--r-lg);
-  background: #C4DDEB;
-  box-shadow:
-    0 10px 30px -12px rgba(14,21,67,.18),
-    0 0 0 1px rgba(43,79,232,.08) inset;
-}
-.chat-head-vesi .vesi-img { border-radius: 50%; }
-.fab-vesi .vesi-img { border-radius: 50%; }
+.vesi-root { width: 100%; height: 100%; position: relative; }
+.vesi-svg  { width: 100%; height: 100%; overflow: visible; display: block; }
 
-/* Hover — hafif yaklaşma + parlaklık (karakter canlı tepki veriyormuş hissi) */
-.vesi-root:hover .vesi-img { transform: scale(1.03); filter: brightness(1.04) saturate(1.08); }
-.mini-vesi .vesi-img, .fab-vesi .vesi-img { cursor: pointer; }
-
-/* Nefes — devamlı yumuşak yukarı-aşağı */
-@keyframes vesiBreath3D {
+/* Idle breathing — SVG gövde grubunun yukarı-aşağı hareketi */
+@keyframes vesiBreath {
   0%, 100% { transform: translateY(0) scale(1); }
-  50%      { transform: translateY(-4px) scale(1.008); }
+  50%      { transform: translateY(-3px) scale(1.015); }
 }
-@media (prefers-reduced-motion: no-preference) {
-  .vesi-img-hero { animation: vesiBreath3D 4.5s ease-in-out infinite; }
+.vesi-body-group {
+  animation: vesiBreath 4s ease-in-out infinite;
+  transform-origin: center bottom;
+  transform-box: fill-box;
 }
 
-/* Hero entrance — kalkanla yerine gelme */
-@keyframes vesiEnter3D {
-  from { opacity: 0; transform: scale(.85) translateY(16px); filter: blur(4px); }
-  to   { opacity: 1; transform: scale(1) translateY(0); filter: blur(0); }
+/* Blink — JS ile rastgele .is-blink toggle'lanıyor */
+.vesi-eye {
+  transition: transform .12s var(--ease-out);
+  transform-origin: center;
+  transform-box: fill-box;
 }
-.vesi-root.enter .vesi-img { animation: vesiEnter3D 1s var(--ease-bounce) both; }
+.vesi-root.is-blink .vesi-eye { transform: scaleY(0.1); }
 
-/* Pulse — dijital mascot için ritmik parıltı */
-@keyframes vesiPulse3D {
-  0%, 100% { filter: brightness(1) saturate(1); transform: scale(1); }
-  50%      { filter: brightness(1.08) saturate(1.15); transform: scale(1.02); }
+/* Eye tracking (cursor takibi için) */
+.vesi-pupils { transition: transform .3s var(--ease-out); }
+
+/* Hero entrance — büyüyerek gelme */
+.vesi-root.enter { animation: vesiEnter .9s var(--ease-bounce) both; }
+@keyframes vesiEnter {
+  0%   { opacity: 0; transform: translateY(40px) scale(.85); }
+  60%  { opacity: 1; transform: translateY(-8px) scale(1.03); }
+  100% { opacity: 1; transform: translateY(0) scale(1); }
 }
-.vesi-root.is-pulse .vesi-img { animation: vesiPulse3D .5s ease-in-out; }
 
-/* Celebrate — form başarı zıplama */
-@keyframes vesiBounce3D {
-  0%, 100% { transform: translateY(0) scale(1); }
-  30%      { transform: translateY(-10px) scale(1.08) rotate(-3deg); }
-  60%      { transform: translateY(0) scale(.97) rotate(2deg); }
-}
-.vesi-root.is-celebrate .vesi-img { animation: vesiBounce3D .9s var(--ease-bounce) 2; }
-
-/* Wave — hero açılışında hafif sağa-sola */
-@keyframes vesiWave3D {
+/* Wave — hero açılışta el sallama */
+.vesi-arm { transform-origin: center bottom; transform-box: fill-box; }
+.vesi-root.is-wave .vesi-arm { animation: vesiWave 1.2s ease-in-out 2; }
+@keyframes vesiWave {
   0%, 100% { transform: rotate(0); }
-  25%      { transform: rotate(-2.5deg); }
-  75%      { transform: rotate(2.5deg); }
-}
-.vesi-root.is-wave .vesi-img { animation: vesiWave3D 1.6s ease-in-out 1; }
-
-/* =========================================================
-   HOLOGRAFİK AURA — karakterin arkasında ritmik dijital parıltı
-   (yalnızca hero yuvasında — büyük alanlarda etkili)
-   ========================================================= */
-.vesi-stage,
-.vesi-figure-wrap,
-.vesi-figure { position: relative; }
-
-.vesi-figure::before,
-.vesi-figure::after {
-  content: '';
-  position: absolute;
-  inset: -8%;
-  border-radius: 50%;
-  pointer-events: none;
-  z-index: -1;
-}
-.vesi-figure::before {
-  background: radial-gradient(circle at 50% 45%,
-    rgba(43,79,232,.25) 0%,
-    rgba(31,185,129,.15) 40%,
-    transparent 70%);
-  filter: blur(24px);
-  animation: vesiAura 6s ease-in-out infinite;
-}
-.vesi-figure::after {
-  background: radial-gradient(circle at 50% 55%,
-    rgba(253,193,58,.18) 0%,
-    transparent 60%);
-  filter: blur(32px);
-  animation: vesiAura 8s ease-in-out infinite reverse;
+  25%      { transform: rotate(-20deg); }
+  75%      { transform: rotate(-10deg); }
 }
 
-@keyframes vesiAura {
-  0%, 100% { opacity: .55; transform: scale(1); }
-  50%      { opacity: 1;   transform: scale(1.08); }
+/* Celebrate — form başarı zıplaması */
+.vesi-root.is-celebrate { animation: vesiBounce .8s var(--ease-bounce) 2; }
+@keyframes vesiBounce {
+  0%, 100% { transform: translateY(0); }
+  30%      { transform: translateY(-16px) scale(1.05); }
+  60%      { transform: translateY(0) scale(.97); }
 }
 
-/* Küçük yuvalarda aura olmasın — kalabalık etmesin */
-.mini-vesi .vesi-figure::before,
-.mini-vesi .vesi-figure::after,
-.fab-vesi::before,
-.fab-vesi::after,
-.chat-head-vesi::before,
-.chat-head-vesi::after { display: none; }
+/* Sparkles — celebrate sırasında çevrede parlayan ışıklar */
+.vesi-sparkle { opacity: 0; }
+.vesi-root.is-celebrate .vesi-sparkle { animation: sparkle .8s ease-out 2; }
+@keyframes sparkle {
+  0%   { opacity: 0; transform: scale(.3); }
+  50%  { opacity: 1; transform: scale(1.2); }
+  100% { opacity: 0; transform: scale(1.6); }
+}
+
+/* Reduced-motion desteği */
+@media (prefers-reduced-motion: reduce) {
+  .vesi-body-group { animation: none !important; }
+}
 
 /* =========================================================
    FAB (chat butonu) — kalıcı ritmik parıltı, kullanıcıyı çağırır
